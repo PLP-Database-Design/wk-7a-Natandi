@@ -18,6 +18,17 @@ VALUES
 
 -- Question 2: Write an SQL query to transform the orderDetails table into 2NF by removing partial dependencies. Ensure that each non-key column fully depends on the entire primary key.
 
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    CustomerName VARCHAR(100)
+);
+INSERT INTO Orders (OrderID, CustomerName)
+VALUES
+(101, 'John Doe'),
+(102, 'Jane Smith'),
+(103, 'Emily Clark');
+
+
 CREATE TABLE Product (
     OrderID INT,
     Product VARCHAR(100),
